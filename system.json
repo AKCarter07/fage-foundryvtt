@@ -16,7 +16,7 @@
         {
             "lang": "en",
             "name": "English",
-            "path": "lang/en.json"
+            "path": "/modules/lang/en.json"
         }
     ],
     "socket": false,

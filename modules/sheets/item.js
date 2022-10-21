@@ -1,6 +1,6 @@
 export default class Item extends ItemSheet{
     get template(){
-        return `systems/fage/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/fage/templates/sheets/${this.item.data.type}-sheet.hbs`;
     }
 
     getData(){

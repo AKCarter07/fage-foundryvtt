@@ -20,7 +20,8 @@
             "atkWith": "Attack",
             "trained": "Trained", 
             "damagePlus": "Damage", 
-            "weapGroup": "Weapons Group"
+            "weapGroup": "Weapons Group",
+            "ranged": "Ranged"
         },
         "weaponGroup": {
             "axes": "Axes",

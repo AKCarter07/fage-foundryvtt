@@ -25,6 +25,7 @@
         "atkWith": "fyt",
         "trained": "yes", 
         "damagePlus": "str", 
-        "weapGroup": ""
+        "weapGroup": "",
+        "ranged": false
     }
 }
