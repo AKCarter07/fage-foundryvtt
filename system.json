@@ -1,57 +1,30 @@
 {
-    "name": "kyles-age-system",
-    "title": "Kyle's AGE System",
+    "name": "fage",
+    "title": "FAGE System",
     "description": "In Progress FAGE system for Titans Grave",
-    "version": "0.1.0",
+    "version": 0.01,
     "templateVersion": 1,
-    "author": "Kyle editing VK Dolea",
-    "authors": [
-		{
-			"name": "",
-			"discord": "",
-			"reddit":"",
-            "twitter": ""
-		}
+    "author": "Kyle",
+
+    "esmodules": [
+        "fage.js"
     ],
-    "media": [
-        {
-          "type": "cover",
-          "url": "https://imgur.com/5k8i0Fy.png",
-          "caption": "Kyle's AGE system"
-        }
+    "styles": [
+        "fage.css"
     ],
-    "scripts": [],
-    "styles": ["styles/age-system.css"],
-    "esmodules": ["age-system.js"],
-    "packs": [],
-    "languages": [
+    "languages":[
         {
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
-        },
-        {
-            "lang": "fr",
-            "name": "Français",
-            "path": "lang/fr.json"
-        },
-        {
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/es.json"
-        },
-        {
-            "lang": "pt-BR",
-            "name": "Português (Brasil)",
-            "path": "lang/ptbr.json"
         }
     ],
     "socket": false,
     "initiative": "3d6 + @initiative",
     "gridDistance": 2,
     "gridUnits": "yd",
-    "minimumCoreVersion": "0.8.5",
-    "compatibleCoreVersion": "9",
+    "minimumCoreVersion": "9.251",
+    "compatibleCoreVersion": "9.251",
     "url": "",
     "manifest": "",
     "download": "",

@@ -1,0 +1,3 @@
+Items:     
+    "trained": "yes"//if untrained, damage is halved (rounded down).
+    "damagePlus": "str", //per if bow or black powder

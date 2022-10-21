@@ -1,0 +1,47 @@
+{
+    "fage":{
+        "stats":{
+            "acc": "Accuracy",
+            "comm": "Communication",
+            "con": "Constitution",
+            "dex": "Dexterity",
+            "fyt": "Fighting",
+            "int": "Intelligence",
+            "per": "Perception",
+            "str": "Strength",
+            "will": "Willpower"
+        },
+        "weapon":{
+            "shortRange": "Short Range",
+            "longRange": "Long Range",
+            "reload": "Reload",
+            "damage": "Damage",
+            "minStr": "Minimum Strength", 
+            "atkWith": "Attack",
+            "trained": "Trained", 
+            "damagePlus": "Damage", 
+            "weapGroup": "Weapons Group"
+        },
+        "weaponGroup": {
+            "axes": "Axes",
+            "blackPowder": "Black Powder",
+            "bludgeons": "Bludgeons",
+            "bows": "Bows",
+            "brawling": "Brawling",
+            "dueling": "Dueling", 
+            "heavyBlades": "Heavy Blades",
+            "lances": "Lances",
+            "lightBlades": "Light Blades",
+            "polearms": "Polearms",
+            "spears": "Spears",
+            "staves": "Staves"
+        },
+        "attack":{
+            "ranged": "Ranged",
+            "mele": "Mele",
+            "magic": "Magic"
+
+        }
+    }
+
+}
