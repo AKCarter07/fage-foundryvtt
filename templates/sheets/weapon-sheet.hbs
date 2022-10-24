@@ -3,12 +3,38 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
-    <div>
+    
+    <div class="sidebar">
+        <div>
+            {{localize "fage.weapon.ranged"}} <input name="data.ranged" type="checkbox" {{checked data.data.reload}}>
+        </div>
+        
+    </div>
+    <div class="main">
+        {{#if data.data.ranged}}
+            <table>
+                <tr>
+                    <th>{{localize "fage.weapon.shortRange"}}</th>
+                    <th>{{localize "fage.weapon.longRange"}}</th>
+                    <th>{{localize "fage.weapon.reload"}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="data.shortRange" type="text" value="{{data.data.shortRange}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        <input name="data.longRange" type="text" value="{{data.data.longRange}}" data-dtype="Number" />
+
+                    </td>
+                    <td>
+                        <input name="data.reload" type="text" value="{{data.data.reload}}" />
+                    </td>
+                </tr>
+            </table>
+        {{/if}}
         <table>
             <tr>
-                <th>{{localize "fage.weapon.shortRange"}}</th>
-                <th>{{localize "fage.weapon.longRange"}}</th>
-                <th>{{localize "fage.weapon.reload"}}</th>
+                
                 <th>{{localize "fage.weapon.damage"}}</th>
                 <th>{{localize "fage.weapon.minStr"}}</th>
                 <th>{{localize "fage.weapon.atkWith"}}</th>
@@ -18,25 +44,16 @@
 
             </tr>
             <tr>
+                
                 <td>
-                    <input name="data.shortRange" type="text" value="{{data.shortRange}}" data-dtype="Number" />
+                    <input name="data.damage" type="text" value="{{data.data.damage}}" />
                 </td>
                 <td>
-                    <input name="data.longRange" type="text" value="{{data.longRange}}" data-dtype="Number" />
-
-                </td>
-                <td>
-                    <input name="data.reload" type="checkbox" {{checked data.reload}}>
-                </td>
-                <td>
-                    <input name="data.damage" type="text" value="{{data.damage}}" />
-                </td>
-                <td>
-                    <input name="data.minStr" type="text" value="{{data.minStr}}" data-dtype="Number" />
+                    <input name="data.minStr" type="text" value="{{data.data.minStr}}" data-dtype="Number" />
                 </td>
                 <td>
                     <select name="data.atkWith">
-                        {{#select data.atkWith}}
+                        {{#select data.data.atkWith}}
                         {{#each config.attackTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -44,11 +61,11 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.trained" type="checkbox" {{checked data.trained}} />
+                    <input name="data.trained" type="checkbox" {{checked data.data.trained}} />
                 </td>
                 <td>
                     <select name="data.damagePlus">
-                        {{#select data.damagePlus}}
+                        {{#select data.data.damagePlus}}
                         {{#each config.damagePlus as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -57,7 +74,7 @@
                 </td>
                 <td>
                     <select name="data.weapGroup">
-                        {{#select data.weapGroup}}
+                        {{#select data.data.weapGroup}}
                         {{#each config.weaponGroup as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -66,6 +83,6 @@
                 </td>
             </tr>
         </table>
-        <textarea name="data.description">{{data.description}}</textarea>
+        <textarea name="data.description">{{data.data.description}}</textarea>
     </div>
 </form>
