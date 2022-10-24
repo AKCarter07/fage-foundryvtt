@@ -1,31 +1,129 @@
 {
-    "Actor":{},
-    "Item":{
+    "Actor":{
         "types":[
-            "weapon"
-        ]
-    },
-    "templates":{
-        "itemDescription": {
-            "name":"",
-            "description": ""
-            
+            "pc",
+            "npc"
+        ],
+        "templates": {
+            "stats": {
+                "acc": {
+                    "value": 0,
+                    "primary": false
+                },
+                "comm": {
+                    "value": 0,
+                    "primary": false
+                },
+                "con": {
+                    "value": 0,
+                    "primary": false
+                },
+                "dex": {
+                    "value": 0,
+                    "primary": false
+                },
+                "fyt": {
+                    "value": 0,
+                    "primary": false
+                },
+                "int": {
+                    "value": 0,
+                    "primary": false
+                },
+                "per": {
+                    "value": 0,
+                    "primary": false
+                },
+                "str": {
+                    "value": 0,
+                    "primary": false
+                },
+                "will": {
+                    "value": 0,
+                    "primary": false
+                }
+            },
+            "attributes": {
+                "HP": {
+                    "value": 10,
+                    "max": 10
+                },
+                "isMagicUser": true,
+                "MP": {
+                    "value": 10,
+                    "max": 10
+                }
+            }
+        },
+        "pc": {
+            "templates": [
+                "stats",
+                "attrubutes"
+            ]
+        },
+        "npc": {
+            "templates": [
+                "stats",
+                "attrubutes"
+            ]
         }
     },
-    "weapon": {
-        "templates":[
-            "itemDescription"
+    "Item":{
+        "types":[
+            "weapon",
+            "armor",
+            "shield",
+            "spell",
+            "talent",
+            "focus"
         ],
-        "type": "weapon",
-        "shortRange": 0,
-        "longRange": 0,
-        "reload": "none",
-        "damage": "1d6",
-        "minStr": "none", 
-        "atkWith": "fyt",
-        "trained": "yes", 
-        "damagePlus": "str", 
-        "weapGroup": "",
-        "ranged": false
+        "templates":{
+            "itemDescription": {
+                "name":"",
+                "description": ""            
+            }
+        },
+        "weapon": {
+            "templates":[
+                "itemDescription"
+            ],
+            "shortRange": 0,
+            "longRange": 0,
+            "reload": "none",
+            "damage": "1d6",
+            "minStr": "none", 
+            "atkWith": "fyt",
+            "trained": "yes", 
+            "damagePlus": "str", 
+            "weapGroup": "",
+            "ranged": false
+        },
+        "armor": {
+            "templates":[
+                "itemDescription"
+            ],
+            "defense": 2
+        },
+        "shield": {
+            "templates":[
+                "itemDescription"
+            ]
+        },
+        "spell": {
+            "templates":[
+                "itemDescription"
+            ]
+        },
+        "talent": {
+            "templates":[
+                "itemDescription"
+            ]
+        },
+        "focus": {
+            "templates":[
+                "itemDescription"
+            ]
+        }
     }
+   
 }

@@ -1,0 +1,13 @@
+.stats-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+}
+.stat {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+.focuses {
+    grid-column: 2/3;
+    grid-row: 1;
+}

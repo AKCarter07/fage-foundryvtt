@@ -38,7 +38,7 @@
                     <select name="data.atkWith">
                         {{#select data.atkWith}}
                         {{#each config.attackTypes as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}} 
                     </select>
@@ -50,7 +50,7 @@
                     <select name="data.damagePlus">
                         {{#select data.damagePlus}}
                         {{#each config.damagePlus as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}} 
                     </select>
@@ -59,7 +59,7 @@
                     <select name="data.weapGroup">
                         {{#select data.weapGroup}}
                         {{#each config.weaponGroup as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}} 
                     </select>
