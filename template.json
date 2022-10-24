@@ -6,54 +6,57 @@
         ],
         "templates": {
             "stats": {
-                "acc": {
-                    "value": 0,
-                    "primary": false
+                "abilities": {
+                    "acc": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "comm": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "con": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "dex": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "fyt": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "int": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "per": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "str": {
+                        "value": 0,
+                        "primary": false
+                    },
+                    "will": {
+                        "value": 0,
+                        "primary": false
+                    }
                 },
-                "comm": {
-                    "value": 0,
-                    "primary": false
-                },
-                "con": {
-                    "value": 0,
-                    "primary": false
-                },
-                "dex": {
-                    "value": 0,
-                    "primary": false
-                },
-                "fyt": {
-                    "value": 0,
-                    "primary": false
-                },
-                "int": {
-                    "value": 0,
-                    "primary": false
-                },
-                "per": {
-                    "value": 0,
-                    "primary": false
-                },
-                "str": {
-                    "value": 0,
-                    "primary": false
-                },
-                "will": {
-                    "value": 0,
-                    "primary": false
-                }
-            },
-            "attributes": {
-                "HP": {
-                    "value": 10,
-                    "max": 10
-                },
-                "isMagicUser": true,
-                "MP": {
-                    "value": 10,
-                    "max": 10
+                "attributes": {
+                    "HP": {
+                        "value": 10,
+                        "max": 10
+                    },
+                    "isMagicUser": true,
+                    "MP": {
+                        "value": 10,
+                        "max": 10
+                    }
                 }
             }
+           
         },
         "pc": {
             "templates": [
@@ -122,7 +125,10 @@
         "focus": {
             "templates":[
                 "itemDescription"
-            ]
+            ],
+            "stat": "",
+            "improved": false,
+            "value": 2
         }
     }
    

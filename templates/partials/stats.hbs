@@ -1,94 +1,31 @@
-<div class="stats-display">
-    <div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.acc}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.acc}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
 
-    </div>
-    <div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.comm}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.comm}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
+<section>
+    <div class="stats-display">
+        {{log data.data.abilities}}
 
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.con}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.con}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
+        {{#each data.data.abilities as |stat id|}}
+        {{log stat}}
+        {{log id}}
+        {{log stat.value}}
+        {{log stat.primary}}
+            <div class="stat {{#if stat.primary}}primary-stat{{/if}}">
+                
+                <label class="stat-name">
+                    {{localize (val id)}}
+                </label>
+                
+                <div class="stat-value">
+                    <input type="text" name="data.{{id}}" value="{{stat.value}}" data-dtype="Number" />
+                    
+                </div>
+                <div class="focuses">
+                    Bows, Slings, more, things, this, list, is, long.
 
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.dex}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.dex}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
+                </div> 
+                
+            </div>
+        {{/each}}
 
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.fyt}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.fyt}}" data-dtype="Number" />
-        </div>
+        
     </div>
-    <div class="focuses">
-
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.int}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.int}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
-
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.per}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.per}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
-
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.str}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.str}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
-
-    </div><div class="stat">
-        <div class="stat-name">
-            {{localize fage.stats.wis}}
-        </div>
-        <div class="stat-value">
-            <input type="text" name="data.acc" value="{{data.data.wis}}" data-dtype="Number" />
-        </div>
-    </div>
-    <div class="focuses">
-
-    </div>
-</div>
+</section>

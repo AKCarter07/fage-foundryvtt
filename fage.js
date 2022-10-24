@@ -25,3 +25,7 @@ Hooks.once("init", function(){
 
     
 });
+
+Handlebars.registerHelper('val', function(stat) {
+    return `fage.stats.${stat}`;
+})
