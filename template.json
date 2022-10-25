@@ -53,21 +53,37 @@
                     "MP": {
                         "value": 10,
                         "max": 10
-                    }
+                    },
+                    "speed": 10,
+                    "defense": 10,
+                    "armor": 0,
+                    "penalty": 0,
+                    "focuses": [],
+                    "languages": []
                 }
+            },
+            "background": {
+                "ancestry1": "",
+                "ancestry2": "",
+                "species": "",
+                "socialClass": "",
+                "bgArchetype": "",
+                "background": ""
+
             }
            
         },
         "pc": {
             "templates": [
-                "stats",
-                "attrubutes"
-            ]
+                "stats"
+            ],
+            "specializations": [],
+            "talents": [],
+            "equipment": []
         },
         "npc": {
             "templates": [
-                "stats",
-                "attrubutes"
+                "stats"
             ]
         }
     },
@@ -82,7 +98,6 @@
         ],
         "templates":{
             "itemDescription": {
-                "name":"",
                 "description": ""            
             }
         },
@@ -126,7 +141,7 @@
             "templates":[
                 "itemDescription"
             ],
-            "stat": "",
+            "stat": "acc",
             "improved": false,
             "value": 2
         }
