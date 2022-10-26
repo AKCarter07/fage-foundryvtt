@@ -28,4 +28,11 @@ Hooks.once("init", function(){
 
 Handlebars.registerHelper('val', function(stat) {
     return `fage.stats.${stat}`;
-})
+});
+
+Handlebars.registerHelper('compare', function(val1, val2){
+    if (val1 === val2){
+        return true;
+    }
+    else {return false;}
+});

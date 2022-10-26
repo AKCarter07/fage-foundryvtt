@@ -1,39 +1,42 @@
-.sheet form {
+.fage.sheet.item form {
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-content {
+.fage.sheet.item .sheet-content {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-content .descrip {
+.fage.sheet.item .sheet-content .descrip {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.sheet .sheet-content .descrip .editor {
+.fage.sheet.item .sheet-content .descrip .editor {
   height: 100%;
 }
-.sheet .focus-body {
+.fage.sheet.item {
+  height: 220;
+}
+.fage.sheet.item .focus-body {
   display: grid;
   grid-template-columns: [one] 16% [two] 84%;
 }
-.sheet .focus-body .body {
+.fage.sheet.item .focus-body .body {
   grid-column-start: two;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.sheet .focus-body .side {
+.fage.sheet.item .focus-body .side {
   grid-column-start: one;
 }
-.sheet .focus-body .col1 {
+.fage.sheet.item .focus-body .col1 {
   grid-column-start: 1;
 }
-.sheet .focus-body .col2 {
+.fage.sheet.item .focus-body .col2 {
   grid-column-start: 2;
 }
-.sheet .focus-body .col3 {
+.fage.sheet.item .focus-body .col3 {
   grid-column-start: 3;
 }
 .sheet .stat {
@@ -52,7 +55,7 @@
   grid-column: 1/-1;
   padding-left: 10px;
 }
-.sheet .sidebar {
+.fage.sheet.actor .sidebar {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -61,7 +64,7 @@
   border: 2px solid black;
   margin: 2px;
 }
-.sheet .stat-value {
+.fage.sheet.actor .stat-value {
   grid-column: 3/3;
   box-sizing: content-box;
   width: 10px;
@@ -70,6 +73,6 @@
   padding-right: 10px;
   font-size: large;
 }
-.sheet .primary-stat {
+.fage.sheet.actor .primary-stat {
   background-color: lightgrey;
 }

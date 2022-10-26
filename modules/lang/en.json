@@ -17,9 +17,9 @@
             "reload": "Reload",
             "damage": "Damage",
             "minStr": "Minimum Strength", 
-            "atkWith": "Attack",
+            "atkWith": "Attack With",
             "trained": "Trained", 
-            "damagePlus": "Damage", 
+            "damagePlus": "Damage Modifier", 
             "weapGroup": "Weapons Group",
             "ranged": "Ranged"
         },
