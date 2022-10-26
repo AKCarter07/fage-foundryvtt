@@ -4,13 +4,13 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
     
-    <div class="sidebar">
+    <div>
         <div>
             {{localize "fage.weapon.ranged"}} <input name="data.ranged" type="checkbox" {{checked data.data.reload}}>
         </div>
         
     </div>
-    <div class="main">
+    <div class="sheet-content">
         {{#if data.data.ranged}}
             <table>
                 <tr>
@@ -83,6 +83,10 @@
                 </td>
             </tr>
         </table>
-        {{editor content=data.description target="data.description" button=true owner=off editable=editable}}
+        <div class="descrip">
+            Description
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=true}}
+        </div>
+        
     </div>
 </form>

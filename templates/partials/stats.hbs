@@ -4,10 +4,7 @@
         {{log data.data.abilities}}
 
         {{#each data.data.abilities as |stat id|}}
-        {{log stat}}
-        {{log id}}
-        {{log stat.value}}
-        {{log stat.primary}}
+        
             <div class="stat {{#if stat.primary}}primary-stat{{/if}}">
                 
                 <label class="stat-name">
@@ -15,13 +12,15 @@
                 </label>
                 
                 <div class="stat-value">
-                    <input type="text" name="data.{{id}}" value="{{stat.value}}" data-dtype="Number" />
+                    <input type="text" name="data.abilities.{{id}}.value" value="{{stat.value}}" data-dtype="Number" />
+                    {{log id stat.value}}
                     
                 </div>
-                <div class="focuses">
+                 <div class="focuses">
                     {{#each data.data.attributes.focuses as |focus id|}}
+                    {{/each}}
 
-                </div> 
+                </div>
                 
             </div>
         {{/each}}

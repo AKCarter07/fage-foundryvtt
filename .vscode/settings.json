@@ -1,0 +1,6 @@
+{
+    "less.compile": {
+        "main": "fage.less",
+        "out": "../"
+    }
+}

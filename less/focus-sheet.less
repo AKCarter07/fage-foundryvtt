@@ -1,0 +1,24 @@
+.sheet {
+    .focus-body{
+        display: grid;
+        grid-template-columns: [one] 16% [two] 84%;
+        .body {
+            grid-column-start: two;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+        .side {
+            grid-column-start: one;
+        }
+        .col1 {
+            grid-column-start: 1;
+        }
+        .col2 {
+            grid-column-start: 2;
+        }
+        .col3 {
+            grid-column-start: 3;
+        }
+    }
+}
