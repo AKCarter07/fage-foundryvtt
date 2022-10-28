@@ -18,6 +18,7 @@
                 </div>
                  <div class="focuses" id="{{id}}.focuses">
                 {{#each ../focuses as |focus|}}
+                {{log "from stats sheet " focus}}
                 {{#if (compare focus.data.stat id) }}
                     <span>{{focus.name}}</span>
 

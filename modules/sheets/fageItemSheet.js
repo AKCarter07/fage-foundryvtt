@@ -5,7 +5,7 @@ export default class fageItem extends ItemSheet{
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             width: 530,
-            height: 440,
+            // height: 440,
             classes: ["fage", "sheet", "item"]
         });
     }

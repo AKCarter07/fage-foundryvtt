@@ -13,9 +13,7 @@
         <h3>Owned Items</h3>
         <ol class="actor-items">
         {{#each actor.items as |item id|}}
-        {{log item.data._id}}
             <li class="actor-item" data-item-id="{{item.data._id}}">
-                Item ID = {{id}}
                 <div class="item-img">
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                     

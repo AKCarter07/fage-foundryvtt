@@ -1,6 +1,6 @@
 import { fage } from "./modules/config.js";
-import fageItem from "./modules/sheets/fageItem.js";
-import fageActor from "./modules/sheets/fageActor.js";
+import fageItem from "./modules/sheets/fageItemSheet.js";
+import fageActor from "./modules/sheets/fageActorSheet.js";
 
 function preloadHandlebarsTemplates() {
     console.log("FAGE | in preloadHandlebarsTemplates");

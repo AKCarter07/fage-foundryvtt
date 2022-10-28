@@ -43,10 +43,16 @@ export default class fageActor extends ActorSheet {
 
     activateListeners(html) {
         //html.find(cssSelector.event(this._someCustomFunction.bind(this)));
-        html.find(".item-edit").click(this._onItemEdit.bind(this));
-        html.find(".item-delete").click(this._onItemDelete.bind(this));
+        
+        if (this.isEditable) {
+            html.find(".item-edit").click(this._onItemEdit.bind(this));
+            html.find(".item-delete").click(this._onItemDelete.bind(this));
 
+        }
 
+        if (this.actor.owner) {
+
+        }
         super.activateListeners(html);
     }
 
@@ -54,7 +60,7 @@ export default class fageActor extends ActorSheet {
         event.preventDefault();
         let element = event.currentTarget;
         let itemId = element.closest(".actor-item").dataset.itemId;
-        let item = this.actor.items.get(`${itemId}`);
+        let item = this.actor.items.get(itemId);
             
         item.sheet.render(true);
     }
@@ -62,19 +68,19 @@ export default class fageActor extends ActorSheet {
     _onItemDelete(event) {
         event.preventDefault();
         console.log("item delete clicked");
-        let element = $(event.currentTarget).parents(".item");
-        let itemId = this.actor.items.get(element.data("itemId"));
-        // let itemId = element.closest(".actor-item").dataset.itemId;
-        console.log(itemId);
-        return this.actor.deleteOwnedItem(itemId);
+        let element = event.currentTarget;
+        let itemId = element.closest(".actor-item").dataset.itemId;
+        let item = this.actor.items.get(itemId);
+
+        return item.delete();
     }
 
     _prepareItems(context){
         const gear = [];
-        const spells = [];
-        const talents = [];
-        const focuses = [];
-        const specializations = [];
+        const spells = new Map();
+        const talents = new Map();
+        const focuses = new Map();
+        const specializations = new Map();
 
         for (let i of context.items) {
             i.img = i.img || DEFAULT_TOKEN;
@@ -83,16 +89,17 @@ export default class fageActor extends ActorSheet {
                 gear.push(i);
             }
             else if (i.type === "spell"){
-                spells.push(i);
+                // spells.set(i.name, i);
             }
             else if (i.type === "talent"){
-                talents.push(i);
+                // talents.set(i.name, i);
             }
             else if (i.type === "focus"){
-                focuses.push(i);
+                console.log ("FAGE || focus being put in list " + JSON.stringify(i));
+                focuses.set(i.name, i);
             }
             else if (i.type === "specialization"){
-                specializations.push(i);
+                // specializations.set(i.name, i);
             }
         }
         context.gear = gear;
@@ -103,7 +110,7 @@ export default class fageActor extends ActorSheet {
     }
 
     _prepareCharacterData(context){
-        console.log(context.data);
+        console.log(" FAGE | actorsheet.js _prepareCharacterData " + context.data);
         for (let [ability, abilData] of Object.entries(context.data.abilities)){
             abilData.label = game.i18n.localize(CONFIG.fage.stats[ability]) ?? ability;
             console.log(abilData.label + " " + abilData.value)

@@ -15,9 +15,6 @@
 .fage.sheet.item .sheet-content .descrip .editor {
   height: 100%;
 }
-.fage.sheet.item {
-  height: 220;
-}
 .fage.sheet.item .focus-body {
   display: grid;
   grid-template-columns: [one] 16% [two] 84%;
