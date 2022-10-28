@@ -15,7 +15,18 @@ Hooks.once("init", function(){
     console.log("FAGE | Initialising FAGE system");
 
     CONFIG.fage = fage;
+    CONFIG.Combat.initiative = {
+        formula: "3d6 + @stats.abilities.dex.value",
+        decimals: 0
+    }
     preloadHandlebarsTemplates();
+
+    game.fage = {
+        fageActor,
+        fageItem
+    };
+
+
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("fage", fageItem, {makeDefault: true});

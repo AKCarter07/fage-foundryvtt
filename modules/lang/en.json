@@ -1,5 +1,9 @@
 {
     "fage":{
+        "sheet": {
+            "editItem": "Edit Item",
+            "deleteItem": "Delete Item"
+        },
         "stats":{
             "acc": "Accuracy",
             "comm": "Communication",
@@ -10,6 +14,9 @@
             "per": "Perception",
             "str": "Strength",
             "will": "Willpower"
+        },
+        "attributes": {
+            
         },
         "weapon":{
             "shortRange": "Short Range",
@@ -42,6 +49,58 @@
             "mele": "Mele",
             "magic": "Magic"
 
+        },
+        "arcana": {
+            "air": "Air",
+            "beast": "Beast",
+            "cold": "Cold",
+            "death": "Death",
+            "divination": "Divination",
+            "earth": "Earth",
+            "enchantment": "Enchantment",
+            "fate": "Fate",
+            "fire": "Fire",
+            "healing": "Healing",
+            "heroic": "Heroic",
+            "illusion": "Illusion",
+            "lightning": "Lightning",
+            "power": "Power",
+            "protection": "Protection",
+            "psychic": "Psychic",
+            "shadow": "Shadow",
+            "water": "Water",
+            "wood": "Wood"
+        },
+        "focus": {
+            "acc": {},
+            "comm": {},
+            "con": {},
+            "dex": {},
+            "fyt": {},
+            "int": {
+                "arcAir": "Arcana (Air)",
+                "arcBeast": "Arcana (Beast)",
+                "arcCold": "Arcana (Cold)",
+                "arcDeath": "Arcana (Death)",
+                "arcDivination": "Arcana (Divination)",
+                "arcEarth": "Arcana (Earth)",
+                "arcEnchantment": "Arcana (Enchantment)",
+                "arcFate": "Arcana (Fate)",
+                "arcFire": "Arcana (Fire)",
+                "arcHealing": "Arcana (Healing)",
+                "arcHeroic": "Arcana (Heroic)",
+                "arcIllusion": "Arcana (Illusion)",
+                "arcLightning": "Arcana (Lightning)",
+                "arcPower": "Arcana (Power)",
+                "arcProtection": "Arcana (Protection)",
+                "arcPsychic": "Arcana (Psychic)",
+                "arcShadow": "Arcana (Shadow)",
+                "arcWater": "Arcana (Water)",
+                "arcWood": "Arcana (Wood)"
+            },
+            "per": {},
+            "str": {},
+            "will": {}
         }
     }
 

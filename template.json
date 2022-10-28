@@ -49,7 +49,6 @@
                         "value": 10,
                         "max": 10
                     },
-                    "isMagicUser": true,
                     "MP": {
                         "value": 10,
                         "max": 10
@@ -69,20 +68,24 @@
                 "bgArchetype": "",
                 "background": ""
 
+            },
+            "toggles": {
+                "isMagicUser": true
             }
            
         },
         "pc": {
             "templates": [
-                "stats"
-            ],
-            "specializations": [],
-            "talents": [],
-            "equipment": []
+                "stats",
+                "background",
+                "toggles"
+            ]
+            
         },
         "npc": {
             "templates": [
-                "stats"
+                "stats",
+                "toggles"
             ]
         }
     },
@@ -93,7 +96,8 @@
             "shield",
             "spell",
             "talent",
-            "focus"
+            "focus",
+            "specialization"
         ],
         "templates":{
             "itemDescription": {
@@ -143,6 +147,11 @@
             "stat": "acc",
             "improved": false,
             "value": 2
+        },
+        "specialization": {
+            "templates": [
+                "itemDescription"
+            ]
         }
     }
    

@@ -76,3 +76,10 @@
 .fage.sheet.actor .primary-stat {
   background-color: lightgrey;
 }
+.fage.sheet.actor .actor-item {
+  display: flex;
+  flex-direction: row;
+}
+.fage.sheet.actor .actor-item .item-name {
+  padding: 0px 10px 0px 10px;
+}

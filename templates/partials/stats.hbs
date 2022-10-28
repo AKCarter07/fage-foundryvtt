@@ -1,9 +1,10 @@
 
 <section>
     <div class="stats-display">
-        
+        {{log "FAGE || in stat sheet"}}
+        {{log "FAGE || abilities" data.abilities}}
 
-        {{#each data.data.abilities as |stat id|}}
+        {{#each data.abilities as |stat id|}}
         
             <div class="stat {{#if stat.primary}}primary-stat{{/if}}">
                 
@@ -17,7 +18,6 @@
                 </div>
                  <div class="focuses" id="{{id}}.focuses">
                 {{#each ../focuses as |focus|}}
-                {{log id "and" focus.data.stat}}
                 {{#if (compare focus.data.stat id) }}
                     <span>{{focus.name}}</span>
 
