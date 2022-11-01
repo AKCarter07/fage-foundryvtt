@@ -37,4 +37,25 @@ fage.stats = {
     per: "fage.stats.per",
     str: "fage.stats.str",
     will: "fage.stats.will"
+};
+fage.arcana = {
+    air: "fage.arcana.air",
+    beast: "fage.arcana.beast",
+    cold: "fage.arcana.cold",
+    death: "fage.arcana.death",
+    divination: "fage.arcana.divination",
+    earth: "fage.arcana.earth",
+    enchantment: "fage.arcana.enchantment",
+    fate: "fage.arcana.fate",
+    fire: "fage.arcana.fire",
+    healing: "fage.arcana.healing",
+    heroic: "fage.arcana.heroic",
+    illusion: "fage.arcana.illusion",
+    lightning: "fage.arcana.lightning",
+    power: "fage.arcana.power",
+    protection: "fage.arcana.protection",
+    psychic: "fage.arcana.psychic",
+    shadow: "fage.arcana.shadow",
+    water: "fage.arcana.water",
+    wood: "fage.arcana.wood"
 }

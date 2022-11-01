@@ -5,13 +5,64 @@
             <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto"/>
             <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
         </header>
-        <div>
-            <div>
-                {{localize "fage.weapon.ranged"}} <input name="data.ranged" type="checkbox" {{checked data.data.reload}}>
+        <div class="toggles">
+            <div class="col1">
+                {{localize "fage.weapon.ranged"}} <input name="data.ranged" type="checkbox" {{checked data.data.reload}} />
+            </div>
+            <div class="col3">
+                {{localize "fage.weapon.trained"}} <input name="data.trained" type="checkbox" {{checked data.data.trained}} />
             </div>
             
         </div>
         <div class="sheet-content">
+            
+            <table>
+                <tr>
+                    
+                    <th>{{localize "fage.weapon.atkWith"}}</th>
+                    <th>{{localize "fage.weapon.damage"}}</th>
+                    <th>{{localize "fage.weapon.damagePlus"}}</th>
+                    <th>{{localize "fage.weapon.weapGroup"}}</th>
+                    <th>{{localize "fage.weapon.minStr"}}</th>
+
+                </tr>
+                <tr>
+               
+                    <td>
+                        <select name="data.atkWith">
+                            {{#select data.data.atkWith}}
+                            {{#each config.attackTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                    <td>
+                        <input name="data.damage" type="text" value="{{data.data.damage}}" size="4" />
+                    </td>
+                    <td>
+                        <select name="data.damagePlus">
+                            {{#select data.data.damagePlus}}
+                            {{#each config.damagePlus as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data.weapGroup">
+                            {{#select data.data.weapGroup}}
+                            {{#each config.weaponGroup as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                    <td>
+                        <input name="data.minStr" type="text" value="{{data.data.minStr}}" data-dtype="Number" />
+                    </td>
+                </tr>
+            </table>
             {{#if data.data.ranged}}
                 <table>
                     <tr>
@@ -33,57 +84,6 @@
                     </tr>
                 </table>
             {{/if}}
-            <table>
-                <tr>
-                    
-                    <th>{{localize "fage.weapon.damage"}}</th>
-                    <th>{{localize "fage.weapon.minStr"}}</th>
-                    <th>{{localize "fage.weapon.atkWith"}}</th>
-                    <th>{{localize "fage.weapon.trained"}}</th>
-                    <th>{{localize "fage.weapon.damagePlus"}}</th>
-                    <th>{{localize "fage.weapon.weapGroup"}}</th>
-
-                </tr>
-                <tr>
-                    
-                    <td>
-                        <input name="data.damage" type="text" value="{{data.data.damage}}" />
-                    </td>
-                    <td>
-                        <input name="data.minStr" type="text" value="{{data.data.minStr}}" data-dtype="Number" />
-                    </td>
-                    <td>
-                        <select name="data.atkWith">
-                            {{#select data.data.atkWith}}
-                            {{#each config.attackTypes as |name type|}}
-                            <option value="{{type}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}} 
-                        </select>
-                    </td>
-                    <td>
-                        <input name="data.trained" type="checkbox" {{checked data.data.trained}} />
-                    </td>
-                    <td>
-                        <select name="data.damagePlus">
-                            {{#select data.data.damagePlus}}
-                            {{#each config.damagePlus as |name type|}}
-                            <option value="{{type}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}} 
-                        </select>
-                    </td>
-                    <td>
-                        <select name="data.weapGroup">
-                            {{#select data.data.weapGroup}}
-                            {{#each config.weaponGroup as |name type|}}
-                            <option value="{{type}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}} 
-                        </select>
-                    </td>
-                </tr>
-            </table>
             <div class="descrip">
                 Description
                 {{editor content=data.data.description target="data.description" button=true owner=owner editable=true}}

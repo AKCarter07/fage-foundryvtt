@@ -102,6 +102,13 @@
         "templates":{
             "itemDescription": {
                 "description": ""            
+            },
+            "talentInfo": {
+                "classes": [],
+                "requirements": "",
+                "level1": "",
+                "level2": "",
+                "leve3": ""
             }
         },
         "weapon": {
@@ -123,22 +130,35 @@
             "templates":[
                 "itemDescription"
             ],
-            "defense": 2
+            "armor rating": 0,
+            "armor penalty": 0,
+            "strain": 0
+
         },
         "shield": {
             "templates":[
                 "itemDescription"
-            ]
+            ],
+            "shield bonus": 0
         },
         "spell": {
             "templates":[
                 "itemDescription"
-            ]
+            ],
+            "arcana": "",
+            "requrements": "",
+            "spellType": "",
+            "mpCost": 0,
+            "castingTime": "",
+            "tn": 0,
+            "test": ""
         },
         "talent": {
             "templates":[
-                "itemDescription"
+                "itemDescription",
+                "talentInfo"
             ]
+            
         },
         "focus": {
             "templates":[
@@ -150,7 +170,8 @@
         },
         "specialization": {
             "templates": [
-                "itemDescription"
+                "itemDescription",
+                "talentInfo"
             ]
         }
     }

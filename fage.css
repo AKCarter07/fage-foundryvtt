@@ -15,6 +15,10 @@
 .fage.sheet.item .sheet-content .descrip .editor {
   height: 100%;
 }
+.fage.sheet.item .toggles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .fage.sheet.item .focus-body {
   display: grid;
   grid-template-columns: [one] 16% [two] 84%;
@@ -27,13 +31,13 @@
 .fage.sheet.item .focus-body .side {
   grid-column-start: one;
 }
-.fage.sheet.item .focus-body .col1 {
+.fage.sheet.item .col1 {
   grid-column-start: 1;
 }
-.fage.sheet.item .focus-body .col2 {
+.fage.sheet.item .col2 {
   grid-column-start: 2;
 }
-.fage.sheet.item .focus-body .col3 {
+.fage.sheet.item .col3 {
   grid-column-start: 3;
 }
 .sheet .stat {

@@ -12,7 +12,7 @@
     <section class="items">
         <h3>Owned Items</h3>
         <ol class="actor-items">
-        {{#each actor.items as |item id|}}
+        {{#each ./gear as |item id|}}
             <li class="actor-item" data-item-id="{{item.data._id}}">
                 <div class="item-img">
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
@@ -25,6 +25,49 @@
                 </div>
             </li>
         {{/each}}
+        </ol>
+        <h3>Owned not-items</h3>
+        <ol class="actor-items">
+            {{#each ./spells as |item id|}}
+                <li class="actor-item" data-item-id="{{item.data._id}}">
+                    <div class="item-img">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                        
+                    </div>
+                    <div class="item-name"><h4>{{item.name}}</h4></div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="{{localize "fage.sheet.editItem"}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize "fage.sheet.deleteItem"}}"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+            {{#each ./talents as |item id|}}
+                <li class="actor-item" data-item-id="{{item.data._id}}">
+                    <div class="item-img">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                        
+                    </div>
+                    <div class="item-name"><h4>{{item.name}}</h4></div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="{{localize "fage.sheet.editItem"}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize "fage.sheet.deleteItem"}}"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+            {{#each ./specializations as |item id|}}
+                <li class="actor-item" data-item-id="{{item.data._id}}">
+                    <div class="item-img">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                        
+                    </div>
+                    <div class="item-name"><h4>{{item.name}}</h4></div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="{{localize "fage.sheet.editItem"}}"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="{{localize "fage.sheet.deleteItem"}}"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+            
         </ol>
     </section>
 </form>

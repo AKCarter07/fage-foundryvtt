@@ -18,9 +18,11 @@
                 </div>
                  <div class="focuses" id="{{id}}.focuses">
                 {{#each ../focuses as |focus|}}
-                {{log "from stats sheet " focus}}
+                
                 {{#if (compare focus.data.stat id) }}
-                    <span>{{focus.name}}</span>
+                    {{log "from stats sheet " focus}}
+                    <span class="actor-item focus" data-item-id="{{focus._id}}" title="{{localize "fage.sheet.editItem"}}">{{focus.name}}</span>
+                    {{log "focus" focus._id}}
 
                 {{/if}}
                 {{/each}}

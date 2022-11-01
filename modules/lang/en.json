@@ -2,7 +2,23 @@
     "fage":{
         "sheet": {
             "editItem": "Edit Item",
-            "deleteItem": "Delete Item"
+            "deleteItem": "Delete Item",
+            "requrements": "Requirements",
+            "spells": {
+                "arcana": "Arcana",
+                "spellType": "Spell Type",
+                "mpCost": "MP Cost",
+                "castingTime": "Casting Time",
+                "tn": "TN",
+                "targNum": "Target Number",
+                "test": "Test",
+                "vSP": "vs. Spellpower"
+            }
+        },
+        "descriptions": {
+            "level1": "Novice",
+            "level2": "Journeyman",
+            "level3": "Master"
         },
         "stats":{
             "acc": "Accuracy",
@@ -16,7 +32,7 @@
             "will": "Willpower"
         },
         "attributes": {
-            
+
         },
         "weapon":{
             "shortRange": "Short Range",
@@ -72,11 +88,60 @@
             "wood": "Wood"
         },
         "focus": {
-            "acc": {},
-            "comm": {},
-            "con": {},
-            "dex": {},
-            "fyt": {},
+            "acc": {
+                "arcaneBlast": "Arcane Blast",
+                "blackPowder": "Black Powder",
+                "blasterLongarms": "Blaster Longarms",
+                "blasterPistols": "Blaster Pistols",
+                "bows": "Bows",
+                "brawling": "Brawling",
+                "dueling": "Dueling",
+                "grenades": " Grenades",
+                "lightBlades": "Light Blades",
+                "staves": "Staves"
+            },
+            "comm": {
+                "animalHandling": "Animal Handling",
+                "bargaining": "Bargaining",
+                "deception": "Deception",
+                "disguise": "Disguise",
+                "etiquette": "Etiquette",
+                "gambling": "Gambling",
+                "investigation": "Investigation",
+                "leadership": "Leadership",
+                "performance": "Performance",
+                "persuasion": "Persuasion",
+                "seduction": "Seduction"
+            },
+            "con": {
+                "drinking": "Drinking",
+                "rowing": "Rowing",
+                "running": "Running",
+                "stamina": "Stamina",
+                "swimming": "Swimming"
+            },
+            "dex": {
+                "acrobatics": "Acrobatics",
+                "advancedDriving": "Advanced Driving",
+                "calligraphy": "Calligraphy",
+                "crafting": "Crafting",
+                "initiative": "Initiative",
+                "legerdemain": "Legerdemain",
+                "lockPicking": "Lock Picking",
+                "piloting": "Piloting",
+                "riding": "Riding",
+                "stealth": "Stealth",
+                "traps": "Traps",
+                "grenades": "Grenades"
+            },
+            "fyt": {
+                "axes": "Axes",
+                "bludgeons": "Bludgeons",
+                "heavyblades": "Heavy Blades",
+                "lances": "Lances",
+                "polearms": "Polearms",
+                "spears": "Spears"
+            },
             "int": {
                 "arcAir": "Arcana (Air)",
                 "arcBeast": "Arcana (Beast)",
@@ -96,11 +161,57 @@
                 "arcPsychic": "Arcana (Psychic)",
                 "arcShadow": "Arcana (Shadow)",
                 "arcWater": "Arcana (Water)",
-                "arcWood": "Arcana (Wood)"
+                "arcWood": "Arcana (Wood)",
+                "arcaneLore": "Arcane Lore",
+                "brewing": "Brewing",
+                "cartography": "Cartography",
+                "computers": "Computers",
+                "cryptography": "Cryptography",
+                "culturalLore": "Cultural Lore",
+                "engineering": "Engineering",
+                "evaluation": "Evaluation",
+                "healing": "Healing",
+                "heraldry": "Heraldry",
+                "historicalLore": "Historical Lore",
+                "militaryLore": "Military Lore",
+                "musicalLore": "Musical Lore",
+                "naturalLore": "Natural Lore",
+                "navigation": "Navigation",
+                "research": "Research",
+                "religiousLore": "Religious Lore",
+                "scientificLore": "Scientific Lore",
+                "writing": "Writing"
             },
-            "per": {},
-            "str": {},
-            "will": {}
+            "per": {
+                "empathy": "Empathy",
+                "hearing": "Hearing",
+                "searching": "Searching",
+                "seeing": "Seeing",
+                "smelling": "Smelling",
+                "tasting": "Tasting",
+                "touching": "Touching",
+                "tracking": "Tracking"
+            },
+            "str": {
+                "climbing": "Climbing",
+                "driving": "Driving",
+                "intimidation": "Intimidation",
+                "jumping": "Jumping",
+                "might": "Might",
+                "smithing": "Smithing"
+            },
+            "will": {
+                "courage": "Courage",
+                "faith": "Faith",
+                "morale": "Morale",
+                "selfDiscipline": "Self-Discipline"
+            }
+        },
+        "talents": {
+
+        },
+        "specializations": {
+
         }
     }
 

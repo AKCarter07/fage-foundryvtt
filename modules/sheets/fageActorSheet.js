@@ -48,6 +48,8 @@ export default class fageActor extends ActorSheet {
             html.find(".item-edit").click(this._onItemEdit.bind(this));
             html.find(".item-delete").click(this._onItemDelete.bind(this));
 
+            new ContextMenu(html, ".focus", this.focusContextMenu)
+
         }
 
         if (this.actor.owner) {
@@ -55,6 +57,24 @@ export default class fageActor extends ActorSheet {
         }
         super.activateListeners(html);
     }
+
+    focusContextMenu = [
+        {
+            name: game.i18n.localize("fage.sheet.editItem"),
+            icon: '<i class ="fas fa-edit"></i>',
+            callback: element => {
+                const item = this.actor.items.get(element.data("item-id"));
+                item.sheet.render(true);
+            }
+        },
+        {
+            name: game.i18n.localize("fage.sheet.deleteItem"),
+            icon: '<i class="fas fa-trash"></i>',
+            callback: element => {
+                this.actor.items.get(element.data("item-id")).delete();
+            }
+        }
+    ]
 
     _onItemEdit(event){
         event.preventDefault();
@@ -77,10 +97,10 @@ export default class fageActor extends ActorSheet {
 
     _prepareItems(context){
         const gear = [];
-        const spells = new Map();
-        const talents = new Map();
-        const focuses = new Map();
-        const specializations = new Map();
+        const spells = [];
+        const talents = [];
+        const focuses = [];
+        const specializations = [];
 
         for (let i of context.items) {
             i.img = i.img || DEFAULT_TOKEN;
@@ -89,17 +109,16 @@ export default class fageActor extends ActorSheet {
                 gear.push(i);
             }
             else if (i.type === "spell"){
-                // spells.set(i.name, i);
+                spells.push(i);
             }
             else if (i.type === "talent"){
-                // talents.set(i.name, i);
+                talents.push(i);
             }
             else if (i.type === "focus"){
-                console.log ("FAGE || focus being put in list " + JSON.stringify(i));
-                focuses.set(i.name, i);
+                focuses.push(i);
             }
             else if (i.type === "specialization"){
-                // specializations.set(i.name, i);
+                specializations.push(i);
             }
         }
         context.gear = gear;
