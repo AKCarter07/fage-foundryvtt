@@ -4,16 +4,8 @@
             "editItem": "Edit Item",
             "deleteItem": "Delete Item",
             "requrements": "Requirements",
-            "spells": {
-                "arcana": "Arcana",
-                "spellType": "Spell Type",
-                "mpCost": "MP Cost",
-                "castingTime": "Casting Time",
-                "tn": "TN",
-                "targNum": "Target Number",
-                "test": "Test",
-                "vSP": "vs. Spellpower"
-            }
+            "requirement": "Requirement"
+            
         },
         "descriptions": {
             "level1": "Novice",
@@ -33,6 +25,23 @@
         },
         "attributes": {
 
+        },
+        "spells": {
+            "arcana": "Arcana",
+            "spellLevel": "Level",
+            "spellType": "Spell Type",
+            "mpCost": "MP Cost",
+            "castingTime": "Casting Time",
+            "tn": "TN",
+            "targNum": "Target Number",
+            "test": "Test",
+            "vSP": "vs. Spellpower",
+            "type": {
+                "attack": "Attack",
+                "defense": "Defense",
+                "enhancement": "Enhancement",
+                "utility": "Utility"
+            }
         },
         "weapon":{
             "shortRange": "Short Range",

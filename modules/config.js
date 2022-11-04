@@ -58,4 +58,15 @@ fage.arcana = {
     shadow: "fage.arcana.shadow",
     water: "fage.arcana.water",
     wood: "fage.arcana.wood"
+};
+fage.talentLevels = {
+    lev1: "fage.descriptions.level1",
+    lev2: "fage.descriptions.level2",
+    lev3: "fage.descriptions.level3"
+}
+fage.spellType = {
+    attack: "fage.spells.type.attack",
+    defense: "fage.spells.type.defense",
+    enhancement: "fage.spells.type.enhancement",
+    utility: "fage.spells.type.utility"
 }

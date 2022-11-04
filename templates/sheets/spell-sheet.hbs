@@ -7,6 +7,65 @@
         </header>
         
         <div class="sheet-content">
+            <table class="spell-info">
+                <tr>
+                    <th>{{localize "fage.spells.arcana"}}</th>
+                    <th>{{localize "fage.spells.spellLevel"}}</th>
+                    <th>{{localize "fage.spells.spellType"}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="data.arcana">
+                            {{#select data.data.arcana}}
+                            {{#each config.arcana as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data.spellLevel">
+                            {{#select data.data.spellLevel}}
+                            {{#each config.talentLevels as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data.spellType">
+                            {{#select data.data.spellType}}
+                            {{#each config.spellType as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}} 
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <table class="spell-info">
+                <tr>
+                    <th>{{localize "fage.spells.mpCost"}}</th>
+                    <th>{{localize "fage.spells.castingTime"}}</th>
+                    <th>{{localize "fage.spells.tn"}}</th>
+                    <th>{{localize "fage.spells.test"}}</th>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input name="data.mpCost" type="text" value="{{data.data.mpCost}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        <input name="data.castingTime" type="text" value="{{data.data.castingTime}}" />
+                    </td>
+                    <td>
+                        <input name="data.tn" type="text" value="{{data.data.tn}}" data-dtype="Number" />
+                    </td>
+                    <td>
+                        <input name="data.test" type="text" value="{{data.data.test}}" />
+                    </td>
+                </tr>
+            </table>
             
             <div class="descrip">
                 Description

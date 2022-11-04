@@ -29,7 +29,7 @@
                 <tr>
                
                     <td>
-                        <select name="data.atkWith">
+                        <select style="text-align: center" name="data.atkWith">
                             {{#select data.data.atkWith}}
                             {{#each config.attackTypes as |name type|}}
                             <option value="{{type}}">{{localize name}}</option>
@@ -38,10 +38,10 @@
                         </select>
                     </td>
                     <td>
-                        <input name="data.damage" type="text" value="{{data.data.damage}}" size="4" />
+                        <input name="data.damage" style="text-align: center" type="text" value="{{data.data.damage}}" size="4" />
                     </td>
                     <td>
-                        <select name="data.damagePlus">
+                        <select style="text-align: center" name="data.damagePlus">
                             {{#select data.data.damagePlus}}
                             {{#each config.damagePlus as |name type|}}
                             <option value="{{type}}">{{localize name}}</option>
@@ -50,7 +50,7 @@
                         </select>
                     </td>
                     <td>
-                        <select name="data.weapGroup">
+                        <select style="text-align: center" name="data.weapGroup">
                             {{#select data.data.weapGroup}}
                             {{#each config.weaponGroup as |name type|}}
                             <option value="{{type}}">{{localize name}}</option>
@@ -58,8 +58,8 @@
                             {{/select}} 
                         </select>
                     </td>
-                    <td>
-                        <input name="data.minStr" type="text" value="{{data.data.minStr}}" data-dtype="Number" />
+                    <td style="text-align: center">
+                        <input style="width: 2em; text-align: center" name="data.minStr" type="text" value="{{data.data.minStr}}" data-dtype="Number" />
                     </td>
                 </tr>
             </table>
@@ -72,14 +72,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="data.shortRange" type="text" value="{{data.data.shortRange}}" data-dtype="Number" />
+                            <input name="data.shortRange" style="text-align: center" type="text" value="{{data.data.shortRange}}" data-dtype="Number" />
                         </td>
                         <td>
-                            <input name="data.longRange" type="text" value="{{data.data.longRange}}" data-dtype="Number" />
+                            <input name="data.longRange" style="text-align: center" type="text" value="{{data.data.longRange}}" data-dtype="Number" />
 
                         </td>
                         <td>
-                            <input name="data.reload" type="text" value="{{data.data.reload}}" />
+                            <input name="data.reload" style="text-align: center" type="text" value="{{data.data.reload}}" />
                         </td>
                     </tr>
                 </table>
